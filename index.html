@@ -4,7 +4,161 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio de Jorge Luis Gutiérrez</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Presentación inicial */
+    .presentacion {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      text-align: center;
+      transition: opacity 0.5s ease;
+    }
+
+    /* Selector de proyectos */
+    .proyectos-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .proyecto-option {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 300px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .proyecto-option:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .proyecto-option h3 {
+      color: #3498db;
+      margin-bottom: 10px;
+    }
+
+    /* Contenido de proyectos - inicialmente oculto */
+    .proyecto-contenido {
+      display: none;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    /* Estilos para cuando un proyecto está activo */
+    #presentacion:target ~ .proyectos-container,
+    #presentacion:target ~ .proyecto-contenido {
+      display: none;
+    }
+
+    #presentacion:target {
+      display: block;
+      opacity: 1;
+    }
+
+    .proyecto-contenido:target {
+      display: block;
+      opacity: 1;
+    }
+
+    /* Estructura del contenido del proyecto */
+    .proyecto-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .proyecto-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .proyecto-descripcion {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .proyecto-galeria {
+      flex: 1;
+      min-width: 300px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .imagen-proyecto img {
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 5px;
+    }
+
+    .pie-imagen {
+      font-size: 0.9em;
+      color: #666;
+      text-align: center;
+    }
+
+    /* Botón volver */
+    .btn-volver {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .btn-volver:hover {
+      background: #2980b9;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .proyecto-info {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -12,51 +166,50 @@
       <h1>Portafolio personal</h1>
     </header>
     
-    <section class="presentacion" id="presentacion">
+    <section id="presentacion" class="presentacion">
       <h2>¡Bienvenido a mi portafolio!</h2>
       <p>Mi nombre es Jorge Luis Gutierrez Delgado, soy Ingeniero en electronica y computación, esta web esta diseñada para almacenar y mostrar algunos de mis proyectos</p>
       <p>Selecciona uno de los proyectos para ver más detalles.</p>
     </section>
     
     <div class="proyectos-container">
-      <div class="proyecto-option" onclick="mostrarProyecto('proyecto1')">
+      <a href="#proyecto1" class="proyecto-option">
         <h3>Proyecto en PHP</h3>
         <p>Plataforma para manejo de inventario de indirectos</p>
-      </div>
+      </a>
       
-      <div class="proyecto-option" onclick="mostrarProyecto('proyecto2')">
+      <a href="#proyecto2" class="proyecto-option">
         <h3>Proyecto en Python</h3>
         <p>Sistema de control de horas de entrenamiento</p>
-      </div>
+      </a>
     </div>
     
     <section id="proyecto1" class="proyecto-contenido">
       <div class="proyecto-header">
         <h2>Proyecto en PHP</h2>
-        <button class="btn-volver" onclick="ocultarProyectos()">Volver</button>
+        <a href="#presentacion" class="btn-volver">Volver</a>
       </div>
       
       <div class="proyecto-info">
         <div class="proyecto-descripcion">
           <h3>Descripción detallada</h3>
-          <p>Aquí puedes agregar una descripción completa de tu proyecto PHP. Incluye:</p>
+          <p>Aquí puedes agregar toda la información sobre tu proyecto PHP:</p>
           <ul>
-            <li>Objetivos del proyecto</li>
-            <li>Tecnologías utilizadas</li>
-            <li>Funcionalidades clave</li>
-            <li>Desafíos superados</li>
+            <li>Tecnologías utilizadas (PHP, MySQL, etc.)</li>
+            <li>Funcionalidades principales</li>
+            <li>Capturas de pantalla relevantes</li>
+            <li>Resultados obtenidos</li>
           </ul>
         </div>
         
         <div class="proyecto-galeria">
           <div class="imagen-proyecto">
-            <!-- Reemplaza con tus imágenes reales -->
-            <img src="ruta/a/tu/imagen1.jpg" alt="Captura del proyecto PHP">
-            <p class="pie-imagen">Pantalla principal del sistema</p>
+            <img src="ruta/a/tu/imagen-php1.jpg" alt="Captura del proyecto PHP">
+            <p class="pie-imagen">Interfaz principal del sistema</p>
           </div>
           <div class="imagen-proyecto">
-            <img src="ruta/a/tu/imagen2.jpg" alt="Otra captura del proyecto">
-            <p class="pie-imagen">Módulo de reportes</p>
+            <img src="ruta/a/tu/imagen-php2.jpg" alt="Otra captura del proyecto">
+            <p class="pie-imagen">Módulo de administración</p>
           </div>
         </div>
       </div>
@@ -65,82 +218,33 @@
     <section id="proyecto2" class="proyecto-contenido">
       <div class="proyecto-header">
         <h2>Programa en Python</h2>
-        <button class="btn-volver" onclick="ocultarProyectos()">Volver</button>
+        <a href="#presentacion" class="btn-volver">Volver</a>
       </div>
       
       <div class="proyecto-info">
         <div class="proyecto-descripcion">
           <h3>Descripción detallada</h3>
-          <p>Aquí puedes describir tu proyecto Python en profundidad:</p>
+          <p>Detalles completos sobre tu proyecto Python:</p>
           <ul>
-            <li>Propósito del sistema</li>
-            <li>Características principales</li>
-            <li>Librerías utilizadas</li>
-            <li>Resultados obtenidos</li>
+            <li>Librerías y frameworks utilizados</li>
+            <li>Diagramas de flujo o arquitectura</li>
+            <li>Capturas de la aplicación</li>
+            <li>Lecciones aprendidas</li>
           </ul>
         </div>
         
         <div class="proyecto-galeria">
           <div class="imagen-proyecto">
-            <img src="ruta/a/tu/imagen3.jpg" alt="Captura del proyecto Python">
-            <p class="pie-imagen">Interfaz principal</p>
+            <img src="ruta/a/tu/imagen-python1.jpg" alt="Captura del proyecto Python">
+            <p class="pie-imagen">Pantalla de registro de horas</p>
           </div>
           <div class="imagen-proyecto">
-            <img src="ruta/a/tu/imagen4.jpg" alt="Otra captura del proyecto">
-            <p class="pie-imagen">Generación de reportes</p>
+            <img src="ruta/a/tu/imagen-python2.jpg" alt="Otra captura del proyecto">
+            <p class="pie-imagen">Reporte estadístico</p>
           </div>
         </div>
       </div>
     </section>
   </div>
-
-  <script>
-    function mostrarProyecto(id) {
-      // Oculta la presentación inicial
-      document.getElementById('presentacion').style.display = 'none';
-      
-      // Oculta todos los proyectos primero
-      const proyectos = document.querySelectorAll('.proyecto-contenido');
-      proyectos.forEach(proyecto => {
-        proyecto.style.display = 'none';
-      });
-      
-      // Muestra el proyecto seleccionado con animación
-      const proyectoSeleccionado = document.getElementById(id);
-      proyectoSeleccionado.style.opacity = 0;
-      proyectoSeleccionado.style.display = 'block';
-      
-      // Animación de fade-in
-      let opacidad = 0;
-      const fadeIn = setInterval(() => {
-        if (opacidad >= 1) {
-          clearInterval(fadeIn);
-        } else {
-          opacidad += 0.05;
-          proyectoSeleccionado.style.opacity = opacidad;
-        }
-      }, 20);
-    }
-    
-    function ocultarProyectos() {
-      // Oculta todos los proyectos con animación
-      const proyectos = document.querySelectorAll('.proyecto-contenido');
-      proyectos.forEach(proyecto => {
-        let opacidad = 1;
-        const fadeOut = setInterval(() => {
-          if (opacidad <= 0) {
-            proyecto.style.display = 'none';
-            clearInterval(fadeOut);
-          } else {
-            opacidad -= 0.05;
-            proyecto.style.opacity = opacidad;
-          }
-        }, 20);
-      });
-      
-      // Muestra la presentación inicial
-      document.getElementById('presentacion').style.display = 'block';
-    }
-  </script>
 </body>
 </html>
