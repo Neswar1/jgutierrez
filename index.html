@@ -1,12 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Portafolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Jorge Luis Gutiérrez</title>
   <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+</head>
+<body>
+  <div class="container">
     <header>
-        <h1>Mi Portafolio</h1>
-  </body>
-  </html>
+      <h1>Portafolio personal</h1>
+    </header>
+    
+    <section class="presentacion" id="presentacion">
+      <h2>¡Bienvenido a mi portafolio!</h2>
+      <p>Mi nombre es Jorge Luis Gutierrez Delgado, soy Ingeniero en electronica y computación, esta web esta diseñada para almacenar y mostrar algunos de mis proyectos</p>
+      <p>Selecciona uno de los proyectos para ver más detalles.</p>
+    </section>
+    
+    <div class="proyectos-container">
+      <div class="proyecto-option" onclick="mostrarProyecto('proyecto1')">
+        <h3>Proyecto en PHP</h3>
+        <p>Plataforma para manejo de inventario de indirectos</p>
+      </div>
+      
+      <div class="proyecto-option" onclick="mostrarProyecto('proyecto2')">
+        <h3>Proyecto en Python</h3>
+        <p>Sistema de control de horas de entrenamiento</p>
+      </div>
+    </div>
+    
+    <section id="proyecto1" class="proyecto-contenido">
+      <div class="proyecto-header">
+        <h2>Proyecto en PHP</h2>
+        <button class="btn-volver" onclick="ocultarProyectos()">Volver</button>
+      </div>
+      
+      <div class="proyecto-info">
+        <div class="proyecto-descripcion">
+          <h3>Descripción detallada</h3>
+          <p>Aquí puedes agregar una descripción completa de tu proyecto PHP. Incluye:</p>
+          <ul>
+            <li>Objetivos del proyecto</li>
+            <li>Tecnologías utilizadas</li>
+            <li>Funcionalidades clave</li>
+            <li>Desafíos superados</li>
+          </ul>
+        </div>
+        
+        <div class="proyecto-galeria">
+          <div class="imagen-proyecto">
+            <!-- Reemplaza con tus imágenes reales -->
+            <img src="ruta/a/tu/imagen1.jpg" alt="Captura del proyecto PHP">
+            <p class="pie-imagen">Pantalla principal del sistema</p>
+          </div>
+          <div class="imagen-proyecto">
+            <img src="ruta/a/tu/imagen2.jpg" alt="Otra captura del proyecto">
+            <p class="pie-imagen">Módulo de reportes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="proyecto2" class="proyecto-contenido">
+      <div class="proyecto-header">
+        <h2>Programa en Python</h2>
+        <button class="btn-volver" onclick="ocultarProyectos()">Volver</button>
+      </div>
+      
+      <div class="proyecto-info">
+        <div class="proyecto-descripcion">
+          <h3>Descripción detallada</h3>
+          <p>Aquí puedes describir tu proyecto Python en profundidad:</p>
+          <ul>
+            <li>Propósito del sistema</li>
+            <li>Características principales</li>
+            <li>Librerías utilizadas</li>
+            <li>Resultados obtenidos</li>
+          </ul>
+        </div>
+        
+        <div class="proyecto-galeria">
+          <div class="imagen-proyecto">
+            <img src="ruta/a/tu/imagen3.jpg" alt="Captura del proyecto Python">
+            <p class="pie-imagen">Interfaz principal</p>
+          </div>
+          <div class="imagen-proyecto">
+            <img src="ruta/a/tu/imagen4.jpg" alt="Otra captura del proyecto">
+            <p class="pie-imagen">Generación de reportes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function mostrarProyecto(id) {
+      // Oculta la presentación inicial
+      document.getElementById('presentacion').style.display = 'none';
+      
+      // Oculta todos los proyectos primero
+      const proyectos = document.querySelectorAll('.proyecto-contenido');
+      proyectos.forEach(proyecto => {
+        proyecto.style.display = 'none';
+      });
+      
+      // Muestra el proyecto seleccionado con animación
+      const proyectoSeleccionado = document.getElementById(id);
+      proyectoSeleccionado.style.opacity = 0;
+      proyectoSeleccionado.style.display = 'block';
+      
+      // Animación de fade-in
+      let opacidad = 0;
+      const fadeIn = setInterval(() => {
+        if (opacidad >= 1) {
+          clearInterval(fadeIn);
+        } else {
+          opacidad += 0.05;
+          proyectoSeleccionado.style.opacity = opacidad;
+        }
+      }, 20);
+    }
+    
+    function ocultarProyectos() {
+      // Oculta todos los proyectos con animación
+      const proyectos = document.querySelectorAll('.proyecto-contenido');
+      proyectos.forEach(proyecto => {
+        let opacidad = 1;
+        const fadeOut = setInterval(() => {
+          if (opacidad <= 0) {
+            proyecto.style.display = 'none';
+            clearInterval(fadeOut);
+          } else {
+            opacidad -= 0.05;
+            proyecto.style.opacity = opacidad;
+          }
+        }, 20);
+      });
+      
+      // Muestra la presentación inicial
+      document.getElementById('presentacion').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
