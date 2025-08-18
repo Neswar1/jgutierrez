@@ -56,7 +56,7 @@
             <li>Base de datos SQLite para almacenamiento de información</li>
             <li>Sistema de autenticación con dos tipos de usuarios (Admin/Operador)</li>
             <li>Creación y gestión de usuarios</li>
-            <li>Asignacion y creación de distintos procesos con sistema de horario y confirmación</li>
+            <li>Asignación y creación de distintos procesos con sistema confirmación Admin - Operador</li>
           </ul>
           
           <h4 style="margin: 1.5rem 0 1rem; color: var(--primary);">Tecnologías utilizadas:</h4>
@@ -74,7 +74,7 @@
         </div>
         
       <div class="imagen-proyecto">
-        <img src="/jgutierrez/python/login.png" alt="Login">
+        <img src="python/login.png" alt="Login">
         <p class="pie-imagen">Interfaz de login</p>
       </div>  
     <div class="imagen-proyecto">
@@ -84,7 +84,7 @@
 
         <div class="proyecto-descripcion" >
         <h3>Creación y manejo de procesos</h3>
-        <p>El sistema permite crear nuevos procesos que constan de 2 tipos de dato, "Nombre" y "horas" en este caso el nombre representa al proceso y la horas necesarios para completarlo</p>
+        <p>El sistema permite crear nuevos procesos que constan de 2 tipos de dato, "Proceso" y "Horas Totales" en este caso el Proceso representa al nombre asignado y las Horas Totales ncesarias para completar dicho proceso</p>
         <p>Una vez creado el proceso, este se puede asignar a un usuario, el cual podrá confirmar las horas que ha trabajado en dicho proceso.</p>
       </div>
     
@@ -104,9 +104,64 @@
     <img src="python/progress.png" alt="Usuario">
     <p class="pie-imagen">Ventana individual de usuario</p>
   </div>
-</div>
-    
+
+  <div class="proyecto-descripcion" >
+        <p>Desde esta ventana el administrador puedo gestionar las horas y procesos asignados a un usuario, también es posible monitorear el avance.</p>
+        <p>Mediante el combobox del centro superior podemos seleccionar los procesos que deseemos agregar, seleccionado y pulsando el boton de Asignar certificado, para eliminar alguno debes selecionarlo de la tabla y clickear Eliminar certificado.</p>
+        <p>Podemos darle doble click sobre el proceso que necesita horas de confirmación al hacerlo sobre alguno que no necesite no pasa nada, pero si tiene horas pendientes se desplegara un mensaje donde nos preguntara si queremos confirmar las horas ingresas por el usuario (nos dirá cuantas horas ingreso). </p>
       </div>
+      </div>
+      <div class="paginacion">
+        <a href="#proyecto1" class="pagina-activa">1</a>
+        <a href="#proyecto1_1">2</a>
+      </div>
+    </section>
+
+    <section id="proyecto1_1" class="proyecto-contenido">
+      <div class="proyecto-header">
+        <h2>Training Manager</h2>
+        <a href="#presentacion" class="btn btn-primary">
+          <i class="fas fa-arrow-left"></i> Volver
+        </a>
+      </div>
+
+            <div class="proyecto-info">
+        <div class="proyecto-descripcion">
+          <h3>Interfaz del usuario</h3>
+          <p>Para ingresar como usuario normal (operador) simplemente ingresamos con unas credenciales activas de un usuario creado por el administrador, lo que veremos será la interfaz del usuario desde la cual podemos observar los procesos que tenemos asignados y de igual manera poder crear una solicitud en un proceso.</p>
+          <p>Lo que debemos de hacer es darle click en la tabla al proceso que deseemos agregar horas de entrenamiento y pulsar el boton de Actualizar progreso, ahi se nos desplegara un input que nos solicitara las horas de practica realizadas.</p>
+        </div>
+        <div class="imagen-proyecto">
+        <img src="python/usuario.png" alt="Usuario">
+        <p class="pie-imagen">Interfaz individual del usuario</p>
+      </div>
+
+      <div class="imagen-proyecto">
+        <img src="python/visita.png" alt="Visita">
+        <p class="pie-imagen">Panel de visita general</p>
+      </div>
+
+      <div class ="proyecto-descripcion">
+        <h3>Perfil de visita</h3>
+        <p>Si en la ventana de Login ingresamos simplemente visita sin colocar una contraseña se nos mostrara una ventana donde podemos observar los usuarios actuales registrados</p>
+        <p>Al hacer doble click sobre cualquier usuario nos desplegara la pantalla individual mostrando los avances y progresos del usuario.</p>
+      </div>
+
+      </div>
+      <div style="margin-bottom: 2rem; margin-top: 2rem; text-align: center; display: flex; flex-direction: column; align-items: center;">
+  <img 
+    src="python/visitante.png" 
+    alt="Visitante" 
+    style="width: 550px; height: 350px; max-width: 100%;"
+  >
+  <p class="pie-imagen">Panel de visita individual</p>
+</div>
+      
+        <div class="paginacion">
+        <a href="#proyecto1">1</a>
+        <a href="#proyecto1_1" class="pagina-activa">2</a>
+      </div>
+
     </section>
 
 
@@ -159,6 +214,7 @@
             <img src="ruta/a/tu/imagen-php2.jpg" alt="Otra captura del proyecto">
             <p class="pie-imagen">Módulo de gestión de inventario</p>
           </div>
+
         </div>
       </div>
     </section>
