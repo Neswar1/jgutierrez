@@ -12,14 +12,14 @@
   <header>
     <div class="container">
       <h1>Jorge Luis Gutiérrez Delgado</h1>
-      <p>Ingeniero en Electrónica y Computación | Desarrollador</p>
+      <p>| Ingeniero en Electrónica y Computación |</p>
     </div>
   </header>
 
   <div class="container">
     <section id="presentacion" class="presentacion">
       <h2>¡Bienvenido a mi portafolio!</h2>
-      <p>Soy un ingeniero apasionado por la tecnología y el desarrollo de soluciones innovadoras. Este espacio está diseñado para mostrar algunos de mis proyectos más relevantes.</p>
+      <p>Este espacio es un portafolio donde muestro algunos de los proyectos que he realizado.</p>
       <p>Selecciona uno de los proyectos para ver más detalles.</p>
     
       <div class="proyectos-container">
@@ -55,8 +55,8 @@
             <li>Interfaz desarrollada con PyQT5 Designer</li>
             <li>Base de datos SQLite para almacenamiento de información</li>
             <li>Sistema de autenticación con dos tipos de usuarios (Admin/Operador)</li>
-            <li>Generación de reportes y estadísticas</li>
-            <li>Interfaz intuitiva y responsive</li>
+            <li>Creación y gestión de usuarios</li>
+            <li>Asignacion y creación de distintos procesos con sistema de horario y confirmación</li>
           </ul>
           
           <h4 style="margin: 1.5rem 0 1rem; color: var(--primary);">Tecnologías utilizadas:</h4>
@@ -73,20 +73,46 @@
           </div>
         </div>
         
-        <div class="proyecto-galeria">
-          <div class="imagen-proyecto">
-            <img src="python/login.png" alt="Ventana de Login">
-            <p class="pie-imagen">Interfaz de login con validación de credenciales</p>
-          </div>
-          
-          <div class="imagen-proyecto">
-            <img src="python/procesos.png" alt="Primer ventana de administrador">
-            <p class="pie-imagen">Módulo de administración con opciones avanzadas</p>
-          </div>
-        </div>
+        <div class="fila-galeria">
+      <div class="imagen-proyecto">
+        <img src="python/login.png" alt="Login">
+        <p class="pie-imagen">Interfaz de login</p>
+      </div>
+    </div>
+    <div class="imagen-proyecto">
+        <img src="python/procesos.png" alt="Procesos">
+        <p class="pie-imagen">Ventana de administrador</p>
+      </div>
+
+        <div class="proyecto-descripcion" >
+        <h3>Creación y manejo de procesos</h3>
+        <p>El sistema permite crear nuevos procesos que constan de 2 tipos de dato, "Nombre" y "horas" en este caso el nombre representa al proceso y la horas necesarios para completarlo</p>
+        <p>Una vez creado el proceso, este se puede asignar a un usuario, el cual podrá confirmar las horas que ha trabajado en dicho proceso.</p>
+      </div>
+    
+      <div class="proyecto-descripcion" >
+        <h3>Gestión de Usuarios</h3>
+        <p>El administrador se encarga de crear,modificar y gestionar todos los usuarios (pueden existir distintos adminstradores), como se muestra en la imagen podemos ver los datos necesarios para crear un nuevo usuario o en su caso modificar alguno ya existente, también podemos visualizar todos los usuarios en la tabla de la derecha.</p>
+        <p>Podemos seleccionar un usuario cualquiera y darle doble click, esto nos desplegara una nueva ventana donde podemos observar la información detallada de dicho usuario al igual que asigarle procesos nuevos o eliminarlos, tambien confirmar horas pendientes realizando doble click sobre dicho proceso.</p>
+        <p>Cuando un usuario se encuentra de color naranja significa que tiene horarios pendientes por confirmar.</p> 
+      </div>
+
+      <div class="imagen-proyecto">
+        <img src="python/users.png" alt="Users">
+        <p class="pie-imagen">Ventana de administrador</p>
+      </div>
+
+    <div style="text-align: center; width: 100%;">
+  <div style="display: inline-block;">
+    <img src="python/progress.png" alt="Usuario" style="max-width: 100%;">
+    <p style="margin-top: 8px;">Ventana individual de usuario</p>
+  </div>
+</div>
+    
       </div>
     </section>
-    
+
+
     <section id="proyecto2" class="proyecto-contenido">
       <div class="proyecto-header">
         <h2>Sistema de Inventario</h2>
@@ -151,20 +177,25 @@
         
         <div class="habilidad">
           <i class="fas fa-database"></i>
-          <h3>Bases de Datos</h3>
-          <p>SQLite, MySQL, diseño y optimización</p>
+          <h3>Desarrollo web</h3>
+          <p>PHP, MySQL, HTML5</p>
         </div>
         
         <div class="habilidad">
-          <i class="fab fa-html5"></i>
-          <h3>HTML5</h3>
-          <p>Maquetación web semántica</p>
+        <i class="fas fa-network-wired"></i>
+        <h3>Gestión de Active Directory</h3>
+        <p>Administración de usuarios, políticas de grupo y seguridad de red</p>
         </div>
         
         <div class="habilidad">
-          <i class="fab fa-css3-alt"></i>
-          <h3>CSS3</h3>
-          <p>Estilos modernos y responsive</p>
+          <i class="fas fa-tools"></i>
+          <h3>Mantenimiento de equipos.</h3>
+          <p>Monitoreo y mantenimiento de equipos de computo y redes.</p>
+        </div>
+        <div class ="habilidad">
+          <i class="fas fa-video"></i>
+          <h3>Control de CCTV.</h3>
+          <p>Instalación y configuración de sistemas de videovigilancia.</p>
         </div>
       </div>
     </section>
@@ -172,12 +203,7 @@
   
   <footer>
     <div class="container">
-      <div class="redes-sociales">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fas fa-envelope"></i></a>
-      </div>
-      <p>&copy; 2023 Jorge Luis Gutiérrez Delgado. Todos los derechos reservados.</p>
+      <p>&copy; 2025 Jorge Luis Gutiérrez Delgado. Todos los derechos reservados.</p>
     </div>
   </footer>
 </body>
