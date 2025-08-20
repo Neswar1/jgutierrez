@@ -171,8 +171,8 @@ header p {
   color: var(--primary);
   font-size: 1.8rem;
 }
-
-/* Estilos para el hero del proyecto */
+ 
+/*hero del proyecto*/
 .proyecto-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -221,7 +221,7 @@ header p {
   border-radius: 8px;
 }
 
-/* Estilos para la grid de características */
+
 .proyecto-features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -269,7 +269,7 @@ header p {
   line-height: 1.5;
 }
 
-/* Estilos para los módulos del proyecto */
+
 .proyecto-modulo {
   margin: 3rem 0;
   padding: 2rem;
@@ -338,7 +338,7 @@ header p {
   border-radius: 8px;
 }
 
-/* Estilos para la conclusión */
+
 .proyecto-conclusion {
   margin: 3rem 0 2rem;
   padding: 2.5rem;
@@ -526,7 +526,7 @@ footer p {
   display: block;
 }
 
-/* Responsive */
+
 @media (max-width: 968px) {
   .proyecto-hero {
     grid-template-columns: 1fr;
