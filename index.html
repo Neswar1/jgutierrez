@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio de Jorge Luis Gutiérrez</title>
-
 </head>
 <body>
   <header>
@@ -37,6 +36,7 @@
       </div>
     </section>
     
+    <!-- PROYECTO 1 - PÁGINA 1 -->
     <section id="proyecto1" class="proyecto-contenido">
       <div class="proyecto-header">
         <h2>Training Manager</h2>
@@ -45,78 +45,118 @@
         </a>
       </div>
       
-      <div class="proyecto-info">
-        <div class="proyecto-descripcion">
+      <div class="proyecto-hero">
+        <div class="proyecto-hero-content">
           <h3>Sistema de gestión de entrenamiento</h3>
           <p>Aplicación desktop desarrollada para la gestión y control de horas de entrenamiento para operadores en un entorno industrial.</p>
           
-          <h4 style="margin: 1.5rem 0 1rem; color: var(--primary);">Características principales:</h4>
-          <ul>
-            <li>Interfaz desarrollada con PyQT5 Designer</li>
-            <li>Base de datos SQLite para almacenamiento de información</li>
-            <li>Sistema de autenticación con dos tipos de usuarios (Admin/Operador)</li>
-            <li>Creación y gestión de usuarios</li>
-            <li>Asignación y creación de distintos procesos con sistema confirmación Admin - Operador</li>
-          </ul>
-          
-          <h4 style="margin: 1.5rem 0 1rem; color: var(--primary);">Tecnologías utilizadas:</h4>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <span style="background: rgba(67, 97, 238, 0.1); color: var(--primary); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
+          <div class="proyecto-tech-stack">
+            <span class="tech-highlight">
               <i class="fab fa-python"></i> Python
             </span>
-            <span style="background: rgba(67, 97, 238, 0.1); color: var(--primary); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
+            <span class="tech-highlight">
               <i class="fas fa-database"></i> SQLite
             </span>
-            <span style="background: rgba(67, 97, 238, 0.1); color: var(--primary); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
+            <span class="tech-highlight">
               <i class="fas fa-desktop"></i> PyQT5
             </span>
           </div>
         </div>
         
-      <div class="imagen-proyecto">
-        <img src="python/login.png" alt="Login">
-        <p class="pie-imagen">Interfaz de login</p>
-      </div>  
-    <div class="imagen-proyecto">
-        <img src="python/procesos.png" alt="Procesos">
-        <p class="pie-imagen">Ventana de administrador</p>
+        <div class="proyecto-hero-image">
+          <img src="python/login.png" alt="Sistema de gestión de entrenamiento">
+        </div>
+      </div>
+      
+      <div class="proyecto-features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h4>Interfaz intuitiva</h4>
+          <p>Desarrollada con PyQT5 Designer para una experiencia de usuario fluida</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h4>Almacenamiento eficiente</h4>
+          <p>Base de datos SQLite para gestión optimizada de la información</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-user-lock"></i>
+          </div>
+          <h4>Sistema de autenticación</h4>
+          <p>Dos tipos de usuarios (Admin/Operador) con permisos diferenciados</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users-cog"></i>
+          </div>
+          <h4>Gestión de usuarios</h4>
+          <p>Creación y administración completa de usuarios del sistema</p>
+        </div>
+      </div>
+      
+      <div class="proyecto-modulo">
+        <div class="modulo-content">
+          <div class="modulo-text">
+            <h3><span class="modulo-number">01</span> Creación y manejo de procesos</h3>
+            <p>El sistema permite crear nuevos procesos que constan de 2 tipos de dato, "Proceso" y "Horas Totales" en este caso el Proceso representa al nombre asignado y las Horas Totales necesarias para completar dicho proceso.</p>
+            <p>Una vez creado el proceso, este se puede asignar a un usuario, el cual podrá confirmar las horas que ha trabajado en dicho proceso.</p>
+            
+            <div class="highlight-box">
+              <p><strong>Función destacada:</strong> Los procesos pueden personalizarse completamente según las necesidades específicas de cada departamento o proyecto.</p>
+            </div>
+          </div>
+          <div class="modulo-image">
+            <img src="python/procesos.png" alt="Panel de administración de procesos">
+            <p class="pie-imagen">Panel de administración de procesos</p>
+          </div>
+        </div>
       </div>
 
-        <div class="proyecto-descripcion" >
-        <h3>Creación y manejo de procesos</h3>
-        <p>El sistema permite crear nuevos procesos que constan de 2 tipos de dato, "Proceso" y "Horas Totales" en este caso el Proceso representa al nombre asignado y las Horas Totales ncesarias para completar dicho proceso</p>
-        <p>Una vez creado el proceso, este se puede asignar a un usuario, el cual podrá confirmar las horas que ha trabajado en dicho proceso.</p>
-      </div>
-    
-      <div class="proyecto-descripcion" >
-        <h3>Gestión de Usuarios</h3>
-        <p>El administrador se encarga de crear,modificar y gestionar todos los usuarios (pueden existir distintos adminstradores), como se muestra en la imagen podemos ver los datos necesarios para crear un nuevo usuario o en su caso modificar alguno ya existente, también podemos visualizar todos los usuarios en la tabla de la derecha.</p>
-        <p>Podemos seleccionar un usuario cualquiera y darle doble click, esto nos desplegara una nueva ventana donde podemos observar la información detallada de dicho usuario al igual que asigarle procesos nuevos o eliminarlos, tambien confirmar horas pendientes realizando doble click sobre dicho proceso.</p>
-        <p>Cuando un usuario se encuentra de color naranja significa que tiene horarios pendientes por confirmar.</p> 
-      </div>
-
-      <div class="imagen-proyecto">
-        <img src="python/users.png" alt="Users">
-        <p class="pie-imagen">Ventana de administrador</p>
+      <div class="proyecto-modulo modulo-reverse">
+        <div class="modulo-content">
+          <div class="modulo-text">
+            <h3><span class="modulo-number">02</span> Gestión de Usuarios</h3>
+            <p>El administrador se encarga de crear, modificar y gestionar todos los usuarios (pueden existir distintos administradores), como se muestra en la imagen podemos ver los datos necesarios para crear un nuevo usuario o en su caso modificar alguno ya existente, también podemos visualizar todos los usuarios en la tabla de la derecha.</p>
+            <p>Podemos seleccionar un usuario cualquiera y darle doble click, esto nos desplegará una nueva ventana donde podemos observar la información detallada de dicho usuario al igual que asignarle procesos nuevos o eliminarlos, también confirmar horas pendientes realizando doble click sobre dicho proceso.</p>
+            <p>Cuando un usuario se encuentra de color naranja significa que tiene horarios pendientes por confirmar.</p> 
+          </div>
+          <div class="modulo-image">
+            <img src="python/users.png" alt="Panel de gestión de usuarios">
+            <p class="pie-imagen">Panel completo de gestión de usuarios</p>
+          </div>
+        </div>
       </div>
 
-  <div class="imagen-proyecto">
-    <img src="python/progress.png" alt="Usuario">
-    <p class="pie-imagen">Ventana individual de usuario</p>
-  </div>
-
-  <div class="proyecto-descripcion" >
-        <p>Desde esta ventana el administrador puedo gestionar las horas y procesos asignados a un usuario, también es posible monitorear el avance.</p>
-        <p>Mediante el combobox del centro superior podemos seleccionar los procesos que deseemos agregar, seleccionado y pulsando el boton de Asignar certificado, para eliminar alguno debes selecionarlo de la tabla y clickear Eliminar certificado.</p>
-        <p>Podemos darle doble click sobre el proceso que necesita horas de confirmación al hacerlo sobre alguno que no necesite no pasa nada, pero si tiene horas pendientes se desplegara un mensaje donde nos preguntara si queremos confirmar las horas ingresas por el usuario (nos dirá cuantas horas ingreso). </p>
+      <div class="proyecto-modulo">
+        <div class="modulo-content">
+          <div class="modulo-text">
+            <h3><span class="modulo-number">03</span> Control granular de usuarios</h3>
+            <p>Desde esta ventana el administrador puede gestionar las horas y procesos asignados a un usuario, también es posible monitorear el avance.</p>
+            <p>Mediante el combobox del centro superior podemos seleccionar los procesos que deseemos agregar, seleccionado y pulsando el botón de Asignar certificado, para eliminar alguno debes seleccionarlo de la tabla y clickear Eliminar certificado.</p>
+            <p>Podemos darle doble click sobre el proceso que necesita horas de confirmación al hacerlo sobre alguno que no necesite no pasa nada, pero si tiene horas pendientes se desplegará un mensaje donde nos preguntará si queremos confirmar las horas ingresadas por el usuario (nos dirá cuantas horas ingresó).</p>
+          </div>
+          <div class="modulo-image">
+            <img src="python/progress.png" alt="Vista detallada de usuario">
+            <p class="pie-imagen">Vista detallada de usuario con progreso</p>
+          </div>
+        </div>
       </div>
-      </div>
+      
       <div class="paginacion">
         <a href="#proyecto1" class="pagina-activa">1</a>
         <a href="#proyecto1_1">2</a>
       </div>
     </section>
 
+    <!-- PROYECTO 1 - PÁGINA 2 -->
     <section id="proyecto1_1" class="proyecto-contenido">
       <div class="proyecto-header">
         <h2>Training Manager</h2>
@@ -125,45 +165,78 @@
         </a>
       </div>
 
-            <div class="proyecto-info">
-        <div class="proyecto-descripcion">
-          <h3>Interfaz del usuario</h3>
-          <p>Para ingresar como usuario normal (operador) simplemente ingresamos con unas credenciales activas de un usuario creado por el administrador, lo que veremos será la interfaz del usuario desde la cual podemos observar los procesos que tenemos asignados y de igual manera poder crear una solicitud en un proceso.</p>
-          <p>Lo que debemos de hacer es darle click en la tabla al proceso que deseemos agregar horas de entrenamiento y pulsar el boton de Actualizar progreso, ahi se nos desplegara un input que nos solicitara las horas de practica realizadas.</p>
+      <div class="proyecto-modulo">
+        <div class="modulo-content">
+          <div class="modulo-text">
+            <h3><span class="modulo-number">04</span> Interfaz del usuario</h3>
+            <p>Para ingresar como usuario normal (operador) simplemente ingresamos con unas credenciales activas de un usuario creado por el administrador, lo que veremos será la interfaz del usuario desde la cual podemos observar los procesos que tenemos asignados y de igual manera poder crear una solicitud en un proceso.</p>
+            <p>Lo que debemos de hacer es darle click en la tabla al proceso que deseemos agregar horas de entrenamiento y pulsar el botón de Actualizar progreso, ahí se nos desplegará un input que nos solicitará las horas de práctica realizadas.</p>
+          </div>
+          <div class="modulo-image">
+            <img src="python/usuario.png" alt="Interfaz individual del usuario">
+            <p class="pie-imagen">Interfaz individual del usuario</p>
+          </div>
         </div>
-        <div class="imagen-proyecto">
-        <img src="python/usuario.png" alt="Usuario">
-        <p class="pie-imagen">Interfaz individual del usuario</p>
       </div>
 
-      <div class="imagen-proyecto">
-        <img src="python/visita.png" alt="Visita">
-        <p class="pie-imagen">Panel de visita general</p>
+      <div class="proyecto-modulo modulo-reverse">
+        <div class="modulo-content">
+          <div class="modulo-text">
+            <h3><span class="modulo-number">05</span> Perfil de visita</h3>
+            <p>Si en la ventana de Login ingresamos simplemente visita sin colocar una contraseña se nos mostrará una ventana donde podemos observar los usuarios actuales registrados.</p>
+            <p>Al hacer doble click sobre cualquier usuario nos desplegará la pantalla individual mostrando los avances y progresos del usuario.</p>
+          </div>
+          <div class="modulo-image">
+            <img src="python/visita.png" alt="Panel de visita general">
+            <p class="pie-imagen">Panel de visita general</p>
+          </div>
+        </div>
       </div>
 
-      <div class ="proyecto-descripcion">
-        <h3>Perfil de visita</h3>
-        <p>Si en la ventana de Login ingresamos simplemente visita sin colocar una contraseña se nos mostrara una ventana donde podemos observar los usuarios actuales registrados</p>
-        <p>Al hacer doble click sobre cualquier usuario nos desplegara la pantalla individual mostrando los avances y progresos del usuario.</p>
+      <div class="proyecto-modulo">
+        <div class="modulo-content">
+          <div class="modulo-text">
+            <h3><span class="modulo-number">06</span> Perfil individual de visita</h3>
+            <p>El modo visitante ofrece una vista de solo lectura del sistema, permitiendo a supervisores y gerentes monitorear el progreso sin riesgo de modificaciones accidentales en los datos.</p>
+          </div>
+          <div class="modulo-image">
+            <img src="python/visitante.png" alt="Panel de visita individual">
+            <p class="pie-imagen">Panel de visita individual con detalles de progreso</p>
+          </div>
+        </div>
       </div>
-
-      </div>
-      <div style="margin-bottom: 2rem; margin-top: 2rem; text-align: center; display: flex; flex-direction: column; align-items: center;">
-  <img 
-    src="python/visitante.png" 
-    alt="Visitante" 
-    style="width: 550px; height: 350px; max-width: 100%;"
-  >
-  <p class="pie-imagen">Panel de visita individual</p>
-</div>
       
-        <div class="paginacion">
+      <div class="proyecto-features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h4>Visualización completa</h4>
+          <p>Acceso a toda la información de usuarios y progresos.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h4>Modo seguro</h4>
+          <p>Permite mirar y monitorear los usuarios y su progreso sin permitir modificaciones.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h4>Reportes visuales</h4>
+          <p>Muestra barra de progreso individual del usuario seleccionado por cada certificado y general.</p>
+        </div>
+      </div>
+      
+      <div class="paginacion">
         <a href="#proyecto1">1</a>
         <a href="#proyecto1_1" class="pagina-activa">2</a>
       </div>
-
     </section>
-
 
     <section id="proyecto2" class="proyecto-contenido">
       <div class="proyecto-header">
@@ -173,48 +246,141 @@
         </a>
       </div>
       
-      <div class="proyecto-info">
-        <div class="proyecto-descripcion">
+      <div class="proyecto-hero">
+        <div class="proyecto-hero-content">
           <h3>Plataforma de gestión de inventario</h3>
           <p>Sistema web desarrollado para el control y seguimiento de inventario de materiales indirectos en un entorno industrial.</p>
           
-          <h4 style="margin: 1.5rem 0 1rem; color: var(--primary);">Características principales:</h4>
-          <ul>
-            <li>Interfaz web responsive</li>
-            <li>Sistema de autenticación y roles de usuario</li>
-            <li>Registro y seguimiento de materiales</li>
-            <li>Generación de reportes en tiempo real</li>
-            <li>Notificaciones y alertas</li>
-          </ul>
-          
-          <h4 style="margin: 1.5rem 0 1rem; color: var(--primary);">Tecnologías utilizadas:</h4>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <span style="background: rgba(67, 97, 238, 0.1); color: var(--primary); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
+          <div class="proyecto-tech-stack">
+            <span class="tech-highlight">
               <i class="fab fa-php"></i> PHP
             </span>
-            <span style="background: rgba(67, 97, 238, 0.1); color: var(--primary); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
+            <span class="tech-highlight">
               <i class="fas fa-database"></i> MySQL
             </span>
-            <span style="background: rgba(67, 97, 238, 0.1); color: var(--primary); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
+            <span class="tech-highlight">
               <i class="fab fa-html5"></i> HTML5
             </span>
-            <span style="background: rgba(67, 97, 238, 0.1); color: var(--primary); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
+            <span class="tech-highlight">
               <i class="fab fa-css3-alt"></i> CSS3
             </span>
           </div>
         </div>
         
-        <div class="proyecto-galeria">
-          <div class="imagen-proyecto">
-            <img src="ruta/a/tu/imagen-php1.jpg" alt="Captura del proyecto PHP">
-            <p class="pie-imagen">Dashboard principal del sistema</p>
+      
+      </div>
+      
+      <div class="proyecto-features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-user-shield"></i>
           </div>
-          
-          <div class="imagen-proyecto">
-            <img src="ruta/a/tu/imagen-php2.jpg" alt="Otra captura del proyecto">
-            <p class="pie-imagen">Módulo de gestión de inventario</p>
+          <h4>Sistema de autenticación</h4>
+          <p>Roles diferenciados para administradores y usuarios normales</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-boxes"></i>
           </div>
-
+          <h4>Gestión de inventario</h4>
+          <p>Control completo de cantidades</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-history"></i>
+          </div>
+          <h4>Historial de solicitudes</h4>
+          <p>Seguimiento completo de todas las transacciones realizadas, permite limpiar.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bell"></i>
+          </div>
+          <h4>Confirmación</h4>
+          <p>Sistema aceptación de solicitudes o de rechazo</p>
+        </div>
+      </div>
+      
+      <div class="proyecto-modulo">
+        <div class="modulo-content">
+          <div class="modulo-text">
+            <h3><span class="modulo-number">01</span> Login</h3>
+            <p>La primer pantalla que tenemos es la de login, utilizando nuestra credenciales ingresamos, los usuarios tienen dos tipos de rol "Administrador" y "Normal", el administrador tiene capacidades extras al de los usuarios normales que veremos a la largo de la presentación.</p>
+          </div>
+          <div class="modulo-image">
+            <img src="php/login.png" alt="Pantalla de login">
+            <p class="pie-imagen">Interfaz de acceso al sistema</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="proyecto-modulo modulo-reverse">
+        <div class="modulo-content">
+          <div class="modulo-text">
+            <h3><span class="modulo-number">02</span> Inventario</h3>
+            <p>Una vez que ingresamos correctamente en este caso utilizamos una cuenta de tipo Administrador, podemos observar que tenemos varios opciones, "Inventario", "Solicitar", "Solicitudes" e "Historial", primeramente explicaremos la opción de Inventario.</p>
+            <p>Esta pantalla nos muestra todos los items que tenemos en el inventario, identificados con un código, una descripción, la cantidad actual (en rojo aquellos que su cantidad se encuentra en critico) y un input en el cual podemos actualizar su cantidad (opción solo disponible para Administrador).</p>
+            <p>La barra de input nos permite buscar especificamente un item para conocer su estado o actualizarlo.</p>
+          </div>
+          <div class="modulo-image">
+            <img src="php/inventario.png" alt="Módulo de inventario">
+            <p class="pie-imagen">Visualización y gestión del inventario</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="proyecto-modulo">
+        <div class="modulo-content">
+          <div class="modulo-text">
+            <h3><span class="modulo-number">03</span> Solicitar</h3>
+            <p>La pantalla de solicitar nos permite realizar solicitudes de material, debemos seleccionar primeramente el item en el combobox, despues escojer la cantidad (en caso de que la cantidad no sea valida el sistema no te dejara realizar la solicitud), posteriomente seleccionamos el area a la que pertenezco y se creara una nueva entrada en la tabla de abajo, pueden realizarla varios pedidos o solamente uno, despues pulsamos el boton de Enviar solicitud, para pedir todos los items que ingresamos.</p>
+          </div>
+          <div class="modulo-image">
+            <img src="php/solicitar.png" alt="Pantalla de solicitudes">
+            <p class="pie-imagen">Formulario para solicitar materiales</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="proyecto-modulo modulo-reverse">
+        <div class="modulo-content">
+          <div class="modulo-text">
+            <h3><span class="modulo-number">04</span> Solicitudes </h3>
+            <p>La interfaz de solicitudes nos presenta una tabla que nos muestra las solicitudes que actualmente se encuentran penidientes por confirmar o rechazar, eso se deja a criterio del Admin, podemos observar el codigo, cantidad, fecha de solicitud y el área perteneciente.</p>
+          </div>
+          <div class="highlight-box">
+              <p><strong>Función de administrador:</strong> Esta pantalla solo esta disponible para los administradores</p>
+            </div>
+          <div class="modulo-image">
+            <img src="php/solicitudes.png" alt="Panel de administración de solicitudes">
+            <p class="pie-imagen">Panel administrativo para gestionar solicitudes</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="proyecto-modulo">
+        <div class="modulo-content">
+          <div class="modulo-text">
+            <h3><span class="modulo-number">05</span> Historial de solicitudes</h3>
+            <p>El historial nos muestra un historico de todas las solicitudes que se han aceptado, mostrandonos toda la información de la solicitud en cuestión, esto nos permite gestionar y tener un control de el inventario.</p>
+          </div>
+          <div class="highlight-box">
+              <p><strong>Función de administrador:</strong> Esta pantalla solo esta disponible para los administradores</p>
+            </div>
+          <div class="modulo-image">
+            <img src="php/historial.png" alt="Historial de solicitudes">
+            <p class="pie-imagen">Registro completo de todas las transacciones</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="proyecto-conclusion">
+        <div class="conclusion-content">
+          <h3>Impacto del sistema</h3>
+          <p>Este sistema de inventario ha permitido optimizar la gestión de materiales indirectos, reduciendo tiempos de búsqueda y mejorando el control sobre el stock disponible. La implementación de roles diferenciados garantiza la seguridad de la información mientras facilita las operaciones diarias.</p>
         </div>
       </div>
     </section>
@@ -235,20 +401,21 @@
         </div>
         
         <div class="habilidad">
-        <i class="fas fa-network-wired"></i>
-        <h3>Gestión de Active Directory</h3>
-        <p>Administración de usuarios, políticas de grupo y seguridad de red</p>
+          <i class="fas fa-network-wired"></i>
+          <h3>Gestión de Active Directory</h3>
+          <p>Administración de usuarios, políticas de grupo y seguridad de red</p>
         </div>
         
         <div class="habilidad">
           <i class="fas fa-tools"></i>
-          <h3>Mantenimiento de equipos.</h3>
-          <p>Monitoreo y mantenimiento de equipos de computo y redes.</p>
+          <h3>Mantenimiento de equipos</h3>
+          <p>Monitoreo y mantenimiento de equipos de computo y redes</p>
         </div>
-        <div class ="habilidad">
+        
+        <div class="habilidad">
           <i class="fas fa-video"></i>
-          <h3>Control de CCTV.</h3>
-          <p>Instalación y configuración de sistemas de videovigilancia.</p>
+          <h3>Control de CCTV</h3>
+          <p>Instalación y configuración de sistemas de videovigilancia</p>
         </div>
       </div>
     </section>
